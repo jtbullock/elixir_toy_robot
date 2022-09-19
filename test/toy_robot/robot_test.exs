@@ -34,6 +34,12 @@ defmodule ToyRobot.RobotTest do
       assert robot.facing == :east
       assert robot.north == 1
     end
+
+    test "turns left to face west", %{ robot: robot } do
+      robot = robot |> Robot.turn_left
+      assert robot.facing == :west
+      assert robot.north == 1
+    end
   end
 
   describe "when the robot is facing north, and it has moved east once" do
