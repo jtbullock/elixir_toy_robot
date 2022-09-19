@@ -36,6 +36,19 @@ defmodule ToyRobot.RobotTest do
     end
   end
 
+  describe "when the robot is facing north, and it has moved east once" do
+    setup do
+      { :ok, %{ robot: %Robot{ east: 1, facing: :north } } }
+    end
+
+    test "moves north one space", %{ robot: robot } do
+      robot = robot |> Robot.move
+      assert robot.north == 1
+      assert robot.east == 1
+      assert robot.facing == :north
+    end
+  end
+
   describe "When the robot is facing east" do
     setup do
       { :ok, %{ robot: %Robot{ east: 0, facing: :east } } }
@@ -57,8 +70,17 @@ defmodule ToyRobot.RobotTest do
     end
   end
 
-  describe "when the robot is facign east, and it has moved north once" do
+  describe "when the robot is facing east, and it has moved north once" do
+    setup do
+      { :ok, %{ robot: %Robot{ north: 1, facing: :east } } }
+    end
 
+    test "moves east one space", %{ robot: robot } do
+      robot = robot |> Robot.move
+      assert robot.north == 1
+      assert robot.east == 1
+      assert robot.facing == :east
+    end
   end
 
   describe "When the robot is facing west" do
@@ -82,6 +104,19 @@ defmodule ToyRobot.RobotTest do
     end
   end
 
+  describe "when the robot is facing west, and it has moved north once" do
+    setup do
+      { :ok, %{ robot: %Robot{ north: 1, facing: :west } } }
+    end
+
+    test "moves west one space", %{ robot: robot } do
+      robot = robot |> Robot.move
+      assert robot.north == 1
+      assert robot.east == -1
+      assert robot.facing == :west
+    end
+  end
+
   describe "When the robot is facing south" do
     setup do
       { :ok, %{ robot: %Robot{ north: 0, facing: :south } } }
@@ -100,6 +135,19 @@ defmodule ToyRobot.RobotTest do
     test "turns right to face west", %{ robot: robot } do
       robot = robot |> Robot.turn_right
       assert robot.facing == :west
+    end
+  end
+
+  describe "when the robot is facing south, and it has moved east once" do
+    setup do
+      { :ok, %{ robot: %Robot{ east: 1, facing: :south } } }
+    end
+
+    test "moves south one space", %{ robot: robot } do
+      robot = robot |> Robot.move
+      assert robot.north == -1
+      assert robot.east == 1
+      assert robot.facing == :south
     end
   end
 end
