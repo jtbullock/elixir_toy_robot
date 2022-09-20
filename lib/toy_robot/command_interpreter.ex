@@ -24,13 +24,12 @@ defmodule ToyRobot.CommandInterpreter do
 
   defp do_interpret( "PLACE " <> rest ) do
     [ east, north, facing ] = rest |> String.split( "," )
-    to_int = &String.to_integer/1
 
     {
       :place,
       %{
-        east: to_int.( east ),
-        north: to_int.( north ),
+        east: east |> String.to_integer,
+        north: north |> String.to_integer,
         facing: facing |> String.downcase |> String.to_atom
       }
     }
