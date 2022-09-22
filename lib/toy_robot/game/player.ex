@@ -36,8 +36,12 @@ defmodule ToyRobot.Game.Player do
     { :noreply, new_simulation }
   end
 
-  def start_link( robot ) do
-    GenServer.start_link( __MODULE__, robot )
+  def start_link( [ robot: robot, name: name ] ) do
+    GenServer.start_link( __MODULE__, robot, name: process_name( name ) )
+  end
+
+  def process_name( name ) do
+    { :via, Registry, { ToyRobot.Game.PlayerRegistry, name } }
   end
 
 end
