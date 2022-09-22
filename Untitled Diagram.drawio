@@ -1,1 +1,49 @@
-<mxfile host="app.diagrams.net" modified="2022-09-22T19:00:50.821Z" agent="5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/15.1 Safari/605.1.15" version="20.3.6" etag="FKQBx8IIj6hKBxoue0ZR" type="github"><diagram id="sDCgQUThUlEmUY2Jjlad">UzV2zq1wL0osyPDNT0nNUTV2VTV2LsrPL4GwciucU3NyVI0MMlNUjV1UjYwMgFjVyA2HrCFY1qAgsSg1rwSLBiADYTaQg2Y1AA==</diagram></mxfile>
+<mxfile host="app.diagrams.net" modified="2022-09-22T20:17:36.585Z" agent="5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/15.1 Safari/605.1.15" etag="qmVmB2WmWyKByo3cQo50" version="20.3.6" type="github">
+  <diagram id="sDCgQUThUlEmUY2Jjlad" name="Page-1">
+    <mxGraphModel dx="786" dy="444" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="51vX7ljYIE3y3LlCxVDq-1" value="Application" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="95" y="40" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="51vX7ljYIE3y3LlCxVDq-2" value="&lt;div style=&quot;line-height: 18px;&quot;&gt;ToyRobot.Game.PlayerSupervisor&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="40" y="250" width="230" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="51vX7ljYIE3y3LlCxVDq-3" value="" style="endArrow=classic;html=1;rounded=0;" edge="1" parent="1" source="51vX7ljYIE3y3LlCxVDq-1" target="51vX7ljYIE3y3LlCxVDq-5">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="120" y="130" as="sourcePoint" />
+            <mxPoint x="430" y="220" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="51vX7ljYIE3y3LlCxVDq-4" value="DynamicSupervisor" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="330" y="250" width="190" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="51vX7ljYIE3y3LlCxVDq-5" value="Supervisor" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="95" y="140" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="51vX7ljYIE3y3LlCxVDq-8" value="" style="endArrow=classic;html=1;rounded=0;" edge="1" parent="1" source="51vX7ljYIE3y3LlCxVDq-5" target="51vX7ljYIE3y3LlCxVDq-2">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="380" y="260" as="sourcePoint" />
+            <mxPoint x="430" y="210" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="51vX7ljYIE3y3LlCxVDq-9" value="" style="endArrow=classic;html=1;rounded=0;" edge="1" parent="1" source="51vX7ljYIE3y3LlCxVDq-2" target="51vX7ljYIE3y3LlCxVDq-4">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="380" y="260" as="sourcePoint" />
+            <mxPoint x="430" y="210" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="51vX7ljYIE3y3LlCxVDq-10" value="GenServer: Player" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="570" y="250" width="190" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="51vX7ljYIE3y3LlCxVDq-11" value="" style="endArrow=classic;html=1;rounded=0;" edge="1" parent="1" source="51vX7ljYIE3y3LlCxVDq-4" target="51vX7ljYIE3y3LlCxVDq-10">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="380" y="260" as="sourcePoint" />
+            <mxPoint x="430" y="210" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
